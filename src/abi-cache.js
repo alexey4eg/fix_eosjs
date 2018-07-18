@@ -58,10 +58,14 @@ function AbiCache(network, config) {
     return c
   }
 
-  return {
+  var ret = {
     abiAsync,
     abi
-  }
+  };
+
+  config.abiCache = ret;
+
+  return ret;
 }
 
 
